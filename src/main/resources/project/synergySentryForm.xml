@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<editor>
+    <formElement>
+        <type>entry</type>
+        <label>Synergy Project:</label>
+        <property>projectSpec</property>
+        <required>1</required>
+        <documentation>Project name. e.g 3D_Simulation.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Database path:</label>
+        <property>SynergyDatabasePath</property>
+        <documentation>The Synergy Database to use in the ccm start command.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Quiet time minutes:</label>
+        <property>QuietTimeMinutes</property>
+        <documentation>The number of minutes of no check-in activity required before launching the procedure.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Enabled for ElectricSentry:</label>
+        <property>TriggerFlag</property>
+        <checkedValue>2</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <initiallyChecked>1</initiallyChecked>
+        <documentation>Enable for continuous integration monitoring by ElectricSentry.</documentation>
+    </formElement>
+    <formElement>
+        <property>scheduleDisabled</property>
+        <value>1</value>
+    </formElement>
+</editor>

@@ -1,0 +1,7 @@
+<configDefinition>
+  <title>Synergy Changelog Report</title>
+  <helpLink>/link/showHelp?page=Synergyhelp</helpLink>     
+    <componentContainer>
+         <component plugin="@PLUGIN_KEY@" version="@PLUGIN_VERSION@" ref="Reports" />
+    </componentContainer>  
+</configDefinition>

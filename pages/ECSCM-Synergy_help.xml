@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator"
+          content="HTML Tidy for Windows (vers 14 February 2006), see www.w3.org" />
+    <meta content="text/html; charset=us-ascii"
+          http-equiv="content-type" />
+
+    <title>Electric Commander Plugin for IBM Rational Synergy</title>
+    <link rel="stylesheet"
+          href="../../plugins/@PLUGIN_KEY@/pluginhelp.css"
+          type="text/css"
+          media="screen" />
+</head>
+
+<body>
+    <div class="help">
+        <h1>Synergy</h1>
+
+        <p>Plugin Version @PLUGIN_VERSION@</p>
+        <hr style="margin-left: -10px; margin-top: 10px; height: 1px; width: 100%; color: #5981BD;"
+            noshade="noshade" />
+
+        <p>Rational Synergy is a software tool that provides software configuration management (SCM) capabilities for all artifacts related to software development including source code, documents and images as well as the final built software executables and libraries.<br/> 
+        Rational Synergy also provides the repository for the Rational change management tool known as Rational Change. Together these two tools form an integrated configuration management and change management environment that is used in software development organizations that need controlled SCM processes and an understanding of what is in a build of their software.</p>
+
+        <h2>Synergy Links</h2>
+
+        <p>More information can be found at:</p>
+
+        <ul>
+            <li><a href="http://www-01.ibm.com/software/awdtools/synergy/">Synergy
+            site</a></li>
+        </ul>
+
+        <h2>Electric Commander Integration to Synergy</h2>
+
+        <p>The ECSCM-Synergy plugin allows you to connect to Synergy using the ccm command line utility and allows you to checkout projects and monitor projects by using the Electric Commander's CI(Continuous integration).</p>
+
+        <h2>Integrated Version</h2>
+
+        <p>This plugin was developed and tested against version 7.1</p>
+
+        <h1>Plugin Procedures</h1>
+
+        <p>IMPORTANT: For all parameter descriptions below,
+        required parameters are shown in
+        <span class='required'>bold italics</span>.</p>
+
+        <div id="CreateConfiguration">
+            <a name='CreateConfiguration'
+                 id="CreateConfiguration"></a> 
+
+            <h3>Plugin Configuration</h3>
+
+            <p>Plugin configurations are sets of parameters that
+            apply across some or all of the plugin's procedures.
+            They are intended to reduce repetition of common
+            values, create predefined sets of parameters for end
+            users, and to securely store credentials where needed.
+            Each configuration is given a unique name that is
+            entered in designated parameters on procedures that use
+            them.<br />
+            <br />
+             Plugin configurations are created by going to the
+            Electric Commander "Administration" tab, then to the
+            "Source Control" sub-tab.</p>
+
+            <table class="grid">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class='required'>SCM Type</td>
+
+                        <td>Select the SCM Type, in this case
+                        "Synergy". (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td class='required'>Configuration
+                        Name</td>
+
+                        <td>Provide a unique name for the
+                        configuration, keeping in mind that you may
+                        need to create additional configurations
+                        over time. (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td>Description</td>
+
+                        <td>You can supply a text description only
+                        for your reference. Commander does not use
+                        this information.</td>
+                    </tr>
+
+                    <tr>
+                        <td>User Name</td>
+
+                        <td>Provide your user name to connect to Synergy. Commander uses to
+                        communicate with the Synergy
+                        server.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Password and Retype Password</td>
+
+                        <td>Provide the password for the specified
+                        User Name.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>User's role</td>
+                        
+                        <td>The user's role</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="CheckoutCode">
+            <a name='CheckoutCode'
+                 id="CheckoutCode"></a> 
+
+            <h3>CheckoutCode</h3>
+
+            <p>This procedure will synchronize the working area for a specific project and then copy the sources to a user provided directory.</p>
+
+            <table class="grid">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class='required'>Configuration name</td>
+
+                        <td>This parameter must have the name of
+                        the configuration created in the "Plugin
+                        Configuration Parameters" section for this
+                        plugin. (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td>Destination Directory</td>
+
+                        <td>The destination directory where sources will be stored after checking out the code.</td>
+                    </tr>
+
+                    <tr>
+                        <td class='required'>Project Name</td>
+
+                        <td>Project name. e.g 3D_Simulation. (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td>Checkout sub-projects</td>
+
+                        <td>Specifies to copy all subprojects in the specified project hierarchy.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Purpose</td>
+
+                        <td>The purpose must be the name of a valid defined purpose and valid for the release of the project.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Release</td>
+
+                        <td>Specifies the release to use for the new copied project.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Version</td>
+
+                        <td>Specifies the version of the checked out project.</td>
+                    </tr>
+                </tbody>
+            </table><img src="../../plugins/@PLUGIN_KEY@/images/Synergy-1.png"
+                 alt="screenshot" />
+        </div>
+
+        <div id="getSCMTag">
+            <a name='getSCMTag'
+                 id="getSCMTag"></a> 
+
+            <h3>getSCMTag</h3>
+
+            <p>This procedure is used for Continuous Integration.
+            This will monitor the repository to discover whether
+            something changed, and trigger a preconfugured
+            procedure.</p>
+
+            <table class="grid">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class='required'>Synergy Project</td>
+
+                        <td>Project name. e.g 3D_Simulation. (Required)</td>
+                    </tr>
+                    <tr>
+                        <td>Database path</td>
+
+                        <td>The Synergy Database to use in the ccm start command.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <img src="../../plugins/@PLUGIN_KEY@/images/Synergy-4.png"
+                 alt="screenshot" />
+        </div>
+
+        <h1>Examples and Use Cases</h1>
+
+        <h2>How to checkout a project</h2>
+        
+        <ul>
+            <li>Create a checkout procedure from the step picker
+        section</li>
+        
+            <li>Fill the parameter panel with the correct parameters. <br/>
+            <img src="../../plugins/@PLUGIN_KEY@/images/Synergy-1.png"
+             alt="Form" />
+            </li>
+            
+            <li>After running the procedure you will be able to see something like:<br/>
+            <img src="../../plugins/@PLUGIN_KEY@/images/Synergy-2.png" alt="Result" />
+            </li>
+            
+            <li>You can always see the log file by clicking on the log icon in the procedure<br/>
+                <img src="../../plugins/@PLUGIN_KEY@/images/Synergy-3.png" alt="Log" />
+            </li>
+        </ul>
+        
+        <h2>How to monitor changes for CI(Continuous integration)</h2>
+        
+        <ul>
+            <li>In a project go to the "Schedules" tab.</li>
+            <li>Click on the "create Schedules" link.</li>
+            <li>Select the "SCM" tab</li>
+            <li>Select the procedure to launch when the sentry find something new.</li>
+            <li>Fill the parameter panel with the correct parameters. <br/>
+                <img src="../../plugins/@PLUGIN_KEY@/images/Synergy-4.png" alt="Form" /> 
+            </li>
+            <li>The sentry will monitor a project for changes<br/>
+                <img src="../../plugins/@PLUGIN_KEY@/images/Synergy-5.png" alt="changes" /> 
+            </li>
+            <li>If something new if found the sentry will launch the procedure we specified in the fourth step<br/>
+                <img src="../../plugins/@PLUGIN_KEY@/images/Synergy-6.png" alt="success" /><br/> 
+                <img src="../../plugins/@PLUGIN_KEY@/images/Synergy-7.png" alt="log" />
+            </li>
+        </ul>
+        
+        <h1>Release Notes</h1>
+        
+        <h2>@PLUGIN_KEY@ 1.0.2</h2>
+
+        <ul>
+            <li>Step chooser name cleanup (continued)</li>
+        </ul>
+
+        <h2>@PLUGIN_KEY@ 1.0.1</h2>
+
+        <ul>
+            <li>Step chooser name cleanup</li>
+        </ul>
+
+		<h2>@PLUGIN_KEY@ 1.0.0</h2>
+
+        <ul>
+            <li>Checkout procedure.</li>
+           
+            <li>Sentry procedure.</li>
+        </ul>
+    </div>
+</body>
+</html>

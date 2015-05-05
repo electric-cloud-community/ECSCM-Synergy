@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<editor>
+    <formElement>
+        <type>textarea</type>
+        <label>Description:</label>
+        <property>description</property>
+    </formElement>
+    <formElement>
+        <type>credential</type>
+        <label>Login As:</label>
+        <property>credential</property>
+        <required>1</required>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Synergy Database Path:</label>
+        <property>SynergyDatabasePath</property>
+        <required>0</required>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>User's role:</label>
+        <property>SynergyUserRole</property>
+        <required>0</required>
+    </formElement>
+</editor>

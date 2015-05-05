@@ -1,0 +1,43 @@
+<?xml version='1.0' standalone='yes'?>
+<fileset>
+    <file>
+        <xpath>//property[propertyName=&quot;ECSCM::Synergy::Cfg&quot;]/value</xpath>
+        <path>SynergyCfg.pm</path>
+    </file>
+    <file>
+        <xpath>//property[propertyName=&quot;ECSCM::Synergy::Driver&quot;]/value</xpath>
+        <path>SynergyDriver.pm</path>
+    </file>
+    <file>
+        <xpath>//property[propertyName=&quot;createConfig&quot;]/value</xpath>
+        <path>synergyCreateConfigForm.xml</path>
+    </file>
+    <file>
+	    <xpath>//property[propertyName=&quot;editConfig&quot;]/value</xpath>
+        <path>synergyEditConfigForm.xml</path>
+    </file>
+    <file>
+	    <xpath>//property[propertyName=&quot;sentry&quot;]/value</xpath>
+        <path>synergySentryForm.xml</path>
+    </file>
+    <file>
+	    <xpath>//procedure[procedureName=&quot;getSCMTag&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+        <path>synergySentryForm.xml</path>
+    </file>
+    <file>
+        <path>//procedure[procedureName=&quot;CheckoutCode&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</path>
+        <xpath>synergyCheckoutForm.xml</xpath>
+    </file>
+    <file>
+        <xpath>//property[propertyName=&quot;checkout&quot;]/value</xpath>
+        <path>synergyCheckoutForm.xml</path>
+    </file>
+    
+    <file>
+	    <xpath>//property[propertyName=&quot;ec_setup&quot;]/value</xpath>
+        <path>ec_setup.pl</path>
+    </file>
+
+
+</fileset>
+

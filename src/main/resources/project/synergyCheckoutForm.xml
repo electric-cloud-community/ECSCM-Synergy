@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<editor>
+    <formElement>
+        <label>Configuration name:</label>
+        <property>config</property>
+        <value>default</value>
+        <documentation>The configuration name</documentation>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Destination Directory:</label>
+        <property>dest</property>
+        <value></value>
+        <documentation>The destination directory where sources will be stored after checking out the code.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Project Name:</label>
+        <property>projectSpec</property>
+        <value></value>
+        <documentation>Project name. e.g 3D_Simulation.</documentation>
+        <required>1</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Checkout sub-projects:</label>
+        <property>subprojects</property>
+        <value></value>
+        <documentation>Specifies to copy all subprojects in the specified project hierarchy.</documentation>
+        <required>0</required>
+        <type>checkbox</type>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+    </formElement>
+    <formElement>
+        <label>Purpose:</label>
+        <property>purpose</property>
+        <value></value>
+        <documentation>The purpose must be the name of a valid defined purpose and valid for the release of the project.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Release:</label>
+        <property>release</property>
+        <value></value>
+        <documentation>Specifies the release to use for the new copied project.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+    <formElement>
+        <label>Version:</label>
+        <property>Version</property>
+        <value></value>
+        <documentation>Specifies the version of the checked out project.</documentation>
+        <required>0</required>
+        <type>entry</type>
+    </formElement>
+</editor>
